@@ -1,0 +1,20 @@
+doctype html
+a(href=`/myProfile`) back to my profile
+br
+h1= mediumArts[0].medium
+br
+
+each art in mediumArts
+    p
+        b="Name:" + art.name
+    p
+        b="Artist: "
+        a(href=`/myProfile/artwork/artists/${art.artist}`)= art.artist 
+    p
+        b="category:"
+        a(href=`/myProfile/artwork/categories/${art.category}`)= art.category
+    p
+        b="medium:"
+        a(href=`/myProfile/artwork/mediums/${art.medium}`)= art.medium
+    br
+    br

@@ -1,0 +1,35 @@
+doctype html
+a(href=`/myProfile`) back to my profile
+br
+h1#name=result[0].name
+
+button#like(type="button" onclick='likeArt()') Like this art
+br
+br
+input#review(type='text')
+br
+br
+button#review(type="button" onclick='addReview()') add review
+//var name = document.getElementById("myID").textContent
+p
+    b Artist: 
+    a(href=`/myProfile/artwork/artists/${result[0].artist}`)= result[0].artist 
+p
+    b category: 
+    a(href=`/myProfile/artwork/categories/${result[0].category}`)= result[0].category
+p  
+    b medium: 
+    a(href=`/myProfile/artwork/mediums/${result[0].medium}`)= result[0].medium
+
+p
+    b description: 
+    =result[0].description
+img(src=`${result[0].image}`, alt=`${result[0].name}`)
+p
+    b likes: 
+p#likeNum=result[0].likes
+p
+    b reviews:
+p#reviews= result[0].review
+//a(href=`${result[0].image}`) image
+script(src='/client.js')

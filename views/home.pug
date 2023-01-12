@@ -1,0 +1,40 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  link(rel='stylesheet' href='styles.css')
+br
+#info
+#main
+  #left.column.left
+
+    h2 Login
+    label User name: 
+    input#lUserName(type='text')
+    br
+    br
+    label Password: 
+    input#lPassword(type='text' name='lname')
+    br
+    br
+    button(type='button' onclick='getLogin()') login
+    br
+    br
+    br
+    br
+  #middle.column.middle
+  #right.column.right
+    br
+    br
+    br
+    br
+    h2 Register
+    label User name: 
+    input#rUserName(type='text')
+    br
+    br
+    label Password: 
+    input#rPassword(type='text' name='lname')
+    br
+    br
+    button(type='button' onclick='getRegister()') register
+script(src='/client.js')

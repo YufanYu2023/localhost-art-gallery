@@ -1,0 +1,46 @@
+doctype html
+
+h1= result.name
+
+a(href=`/myProfile/artwork`) view all art works
+br
+br
+a(href=`/myProfile/profiles`) view other user's profile
+br
+br
+p
+    b liked artwork: 
+    a(href=`/myProfile/artwork/art/${result.liked}`)=result.liked
+p
+    b followed user: 
+    a(href=`/myProfile/profiles/${result.follows}`)=result.follows
+p
+    b reviewed: 
+    a(href=`/myProfile/artwork/art/${result.reviewed}`)=result.reviewed
+p
+    b workshop: 
+    =result.workShop
+br  
+input#artName(type='text')   
+button(type='button' onclick='searchByName()') search artwork by name
+br
+br
+input#artist(type='text')   
+button(type='button' onclick='searchByArtist()') search artwork by artist
+br
+br
+input#category(type='text')   
+button(type='button' onclick='searchByCategory()') search artwork by category
+br  
+br   
+a(href=`/myProfile/addArt`) add Art
+br
+br
+a(href=`/myProfile/addWorkshop`) add Workshop
+br
+br
+button#upgrade(type="button" onclick='cancelUpgrade()') cancel unpgrade
+br
+br
+button#logout(type="button" onclick='logout()') logout
+script(src='/client.js')

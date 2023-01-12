@@ -1,0 +1,30 @@
+doctype html
+a(href=`/myProfile`) back to my profile
+br
+h1 Add New ArtWork
+label name: 
+input#name(type='text')
+br
+br
+label  artist: 
+input#artist(type='text')
+br
+br
+label  category: 
+input#category(type='text')
+br
+br
+label  medium: 
+input#medium(type='text')
+br
+br
+label  description:  
+input#description(type='text')
+br
+br
+label  image link:  
+input#image(type='text')
+br
+br
+button#newArt(type='button' onclick='addArt()') Add New Art
+script(src='/client.js')

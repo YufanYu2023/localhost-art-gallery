@@ -1,0 +1,12 @@
+a(href=`/myProfile`) back to my profile
+br
+h1=result[0].artist
+brbr
+button#follow(type="button" onclick='follow()') follow this artist
+br
+br
+
+b Arts: 
+br
+each art in result
+    a(href=`/myProfile/artwork/art/${art.name}`)= art.name

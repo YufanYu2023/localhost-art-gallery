@@ -1,0 +1,8 @@
+doctype html
+a(href=`/myProfile`) back to my profile
+br
+
+each user in users
+    p
+        //b="Name:" + art.name
+        a(href=`/myProfile/profiles/${user.name}`)= user.name

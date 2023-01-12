@@ -1,0 +1,18 @@
+
+doctype html
+a(href=`/myProfile`) back to my profile
+br
+h1 Artworks 
+
+each art in gallery
+    p
+        //b="Name:" + art.name
+        a(href=`/myProfile/artwork/art/${art.name}`)= art.name
+    //p
+        b="Artist: "
+        a(href=`/artists/${art.artist}`)= art.artist 
+    //p
+        b="category:"
+        a(href=`/categories/${art.category}`)= art.category
+    //br
+    //br

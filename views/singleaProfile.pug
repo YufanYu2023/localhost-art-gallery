@@ -1,0 +1,29 @@
+doctype html
+
+a(href=`/myProfile`) back to my profile
+br
+h1#name= result.name
+
+a(href=`/myProfile/artwork`) view all art works
+br
+br
+a(href=`/myProfile/profiles`) view other user's profile
+br
+br
+p
+    b liked artwork: 
+    a(href=`/myProfile/artwork/art/${result.liked}`)=result.liked
+p
+    b followed user: 
+    a(href=`/myProfile/profiles/${result.follows}`)=result.follows
+p
+    b reviewed: 
+    a(href=`/myProfile/artwork/art/${result.reviewed}`)=result.reviewed
+p
+    b workshop: 
+    P#title=result.workShop   
+    button(type="button" onclick='registerWorkshop()') register this workshop
+br 
+button#follow(type="button" onclick='follow()') follow this user
+
+script(src='/client.js')
